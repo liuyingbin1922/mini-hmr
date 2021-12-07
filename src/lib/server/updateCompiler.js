@@ -4,7 +4,7 @@ let updateCompiler = (compiler) => {
     config.entry = {
         main: [
             path.resolve(__dirname, "../client/index.js"),
-            path.resolve(__dirname, "../client/hot-dev-server.js"),
+            path.resolve(__dirname, "../client/hot/dev-server.js"),
             config.entry
         ]
     }

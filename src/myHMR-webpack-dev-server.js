@@ -1,6 +1,4 @@
- // /src/myHMR-webpack-dev-server.js
- 
- const webpack = require("webpack");
+const webpack = require("webpack");
  const Server = require("./lib/server/Server");
  const config = require("../webpack.config");
  
@@ -10,6 +8,6 @@
  const server = new Server(compiler);
  
  // 最后一步【10】启动webserver服务器
- server.listen(8000, "localhost", () => {
-     console.log(`Project is running at http://localhost:8000/`);
+ server.listen(8001, "localhost", () => {
+     console.log(`Project is running at http://localhost:8001/`);
  })

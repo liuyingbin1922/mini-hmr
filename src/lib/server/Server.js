@@ -1,5 +1,3 @@
-// /src/lib/server/Server.js
-
 const express = require("express");
 const http = require("http");
 const mime = require("mime");// 可以根据文件后缀，生成相应的Content-Type类型
@@ -26,7 +24,7 @@ class Server {
         this.createServer();// 【8】创建webserver服务器，让浏览器可以访问编译的文件
         this.createSocketServer();// 【9】创建websocket服务器，监听connection事件，将所有的websocket客户端存起来，同时通过发送hash事件，将最新一次的编译hash传给客户端
     }
-    // /src/lib/server/Server.js
+
     setupHooks() {
         let { compiler } = this;
         compiler.hooks.done.tap("webpack-dev-server", (stats) => {
@@ -94,6 +92,7 @@ class Server {
     createServer() {
         this.server = http.createServer(this.app);
     }
+
     createSocketServer() {
         // socket.io+http服务 实现一个websocket
         const io = socket(this.server);
